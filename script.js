@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     firstOperand = calcula(firstOperand, parseFloat(currentInput.replace(',', '.')), operator);
                 }
                 operator = value;
-                expression += currentInput + ' ' + operator + ' ';
+                expression += currentInput + operator;
                 currentInput = '';
                 display.value = expression;
                 break;
@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     currentInput = currentInput.slice(0, -1);
                 } else if (operator !== '') {
                     operator = '';
-                    expression = expression.trim().slice(0, -1).trim();
+                    expression = expression.slice(0, -1);
                 } else if (firstOperand !== null) {
                     firstOperand = null;
                     expression = '';
