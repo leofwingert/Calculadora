@@ -1,0 +1,123 @@
+body {
+    font-family: work sans, sans-serif;
+    background-color: #a5a3a3;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator {
+    height: 599px;
+    width: 335px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #F1F2F3;
+}
+
+.display {
+    margin: 10px;
+    width: 315px;
+    height:auto;
+    box-sizing: border-box;
+    text-align: right;
+    border-bottom: 1px solid transparent;
+}
+
+.display input {
+    background-color: transparent;
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    border: transparent;
+    border-radius: 5px;
+    font-family: work sans, sans-serif;
+    font-weight: 300;
+    font-size: 60px;
+    color: #000;
+    text-align: right;
+    vertical-align: center;
+}
+
+.display1 {
+    background-color: transparent;
+    margin: 10px;
+    width: 315px;
+    height: 47px;
+    box-sizing: border-box;
+    text-align: right;
+    border-bottom: 1px solid transparent;
+}
+
+.display1 input {
+    background-color: transparent;
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    border: transparent;
+    border-radius: 5px;
+    font-family: work sans, sans-serif;
+    font-weight: 300;
+    font-size: 40px;
+    color: #4E505F;
+    text-align: right;
+    vertical-align: center;
+}
+
+.buttons {
+    display: grid;
+    gap: 5px;
+    width: 335px;
+    height: 400px;
+    padding: 10px;
+    box-sizing: border-box;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.btn, .btn0, .btn1 {
+    padding: 15px;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 40px;
+    border-radius: 30px;
+    border-color: transparent;
+    color: #000;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:hover, .btn0:hover, .btn1:hover {
+    background-color: #555555;
+}
+
+.btn:active, .btn0:active, .btn1:active {
+    background-color: #aaa;
+}
+
+
+.btn0 {
+    color: #000;
+    background-color: #D2D3DA;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn1 {
+    padding: 10px;
+    color: #fff;
+    background-color: #4B5EFC;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
