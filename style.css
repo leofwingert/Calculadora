@@ -18,8 +18,8 @@ body {
     align-items: center;
     height: 620px;
     width: 335px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     background-color: #17171C;
 }
 
@@ -51,8 +51,12 @@ body {
 }
 
 .trilho .indicador{
-    width: 30px;
-    height: 32px;
+    align-items: center;
+    margin-top: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
+    width: 26px;
+    height: 28px;
     background-color: #4E505F;
     border-radius: 50%;
     transform: scale(.9);
@@ -62,12 +66,12 @@ body {
 }
 
 .trilho.dark{
-    background-color: #ffffff;
+    background-color: #F1F2F3;
 }
 
 .trilho.dark .indicador{
     left: 42px;
-    background-color: #D2D3DA;
+    background-color: #4E505F;
 }
 
 body.dark{
@@ -75,7 +79,7 @@ body.dark{
 }
 
 .calculator.dark {
-    background-color: #F1F2F3;
+    background-color: #fff;
 }
 
 .calculator.dark .display input {
