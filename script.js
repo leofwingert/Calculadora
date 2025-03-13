@@ -163,7 +163,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function formatResult(result) {
-        let x = parseFloat(result).toString().replace('.', ',');
+        let x = parseFloat(result).toFixed(2).toString().replace('.', ',');
         return x;
     }
+
     });
