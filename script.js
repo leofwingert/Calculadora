@@ -17,6 +17,8 @@ document.addEventListener('DOMContentLoaded', function() {
     let result = 0;
     let expression = '';
 
+    sunIcon.style.display = 'none';
+
     trilho.addEventListener('click', ()=>{
         trilho.classList.toggle('dark');
         body.classList.toggle('dark');
