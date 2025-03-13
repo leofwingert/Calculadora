@@ -13,8 +13,14 @@
 </header>
 
 <body>
-    <div class="calculator">
-        
+    <div class="calculator" id="calculator">
+
+        <div class="trilho" id="trilho">
+            <div class="indicador" id="indicador"></div>
+            <img src="source/moon.png" id="lua" class="icon">
+            <img src="source/sun.png" id="sol" class="icon">
+        </div>
+
         <div class="display1">
             <input type="text" id="result1" disabled>
         </div>
@@ -26,10 +32,10 @@
         <div class="buttons">
             <button class="btn0" id="btn_C">C</button>
             <button class="btn0" id="btn_+/-">
-                <img src="source/👀 Icon.png" alt="">
+                    <img src="source/+branco.png" id="+escuro">
             </button>
             <button class="btn0" id="btn_%">%</button>
-            <button class="btn0" id="btn_/">÷</button>
+            <button class="btn1" id="btn_/">÷</button>
 
             <button class="btn" id="btn_7">7</button>
             <button class="btn" id="btn_8">8</button>
@@ -49,7 +55,7 @@
             <button class="btn" id="btn_.">,</button>
             <button class="btn" id="btn_0">0</button>
             <button class="btn" id="btn_delete">
-                <img src="source/Union.png" alt="">            
+                <img src="source/delete branco.png" id="delete escuro">
             </button>
             <button class="btn1" id="btn_=">=</button>
         </div>

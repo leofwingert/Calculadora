@@ -1,21 +1,140 @@
 body {
     font-family: work sans, sans-serif;
-    background-color: #a5a3a3;
+    background-color: #414141;
     margin: 0;
     padding: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    transition: 0.5s;
 }
 
 .calculator {
-    height: 599px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 620px;
     width: 335px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #17171C;
+}
+
+.icon{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.5s;
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+}
+
+#lua {
+    right: 10px;
+}
+
+#sol {
+    left: 10px;
+}
+
+.trilho{
+    width: 72px;
+    height: 32px;
+    background-color: #000;
+    border-radius: 150px;
+    position: relative;
+    cursor: pointer;
+}
+
+.trilho .indicador{
+    width: 30px;
+    height: 32px;
+    background-color: #4E505F;
+    border-radius: 50%;
+    transform: scale(.9);
+    position: absolute;
+    left: 0;
+    transition: left .5s;
+}
+
+.trilho.dark{
+    background-color: #ffffff;
+}
+
+.trilho.dark .indicador{
+    left: 42px;
+    background-color: #D2D3DA;
+}
+
+body.dark{
     background-color: #F1F2F3;
 }
+
+.calculator.dark {
+    background-color: #F1F2F3;
+}
+
+.calculator.dark .display input {
+    color: #000000;
+}
+
+.calculator.dark .display1 input {
+    color: #4E505F;
+}
+
+.calculator.dark .buttons {
+    background-color: #FFFFFF;
+}
+
+.calculator.dark .btn, .calculator.dark .btn0, .calculator.dark .btn1 {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.calculator.dark .btn:hover, .calculator.dark .btn0:hover, .calculator.dark .btn1:hover {
+    background-color: #BFC0C6;
+}
+
+.calculator.dark .btn:active, .calculator.dark .btn0:active, .calculator.dark .btn1:active {
+    background-color: #A5A7B0;
+}
+
+.btn0.dark btn0_/{
+    background-color: #FFFFFF;
+    color: #fff;
+}
+
+.calculator.dark .btn0 {
+    background-color: #D2D3DA;
+    color: #000;
+}
+
+.calculator.dark .btn0:hover {
+    background-color: #555555;
+}
+
+.calculator.dark .btn0:active {
+    background-color: #aaa;
+}
+
+.calculator.dark .btn1 {
+    background-color: #4B5EFC;
+    color: #fff;
+}
+
+.calculator.dark .btn1:hover {
+    background-color: #4B5EFC;
+}
+
+.calculator.dark .btn1:active {
+    background-color: #4B5EFC;
+}
+
+
 
 .display {
     margin: 10px;
@@ -36,7 +155,7 @@ body {
     font-family: work sans, sans-serif;
     font-weight: 300;
     font-size: 60px;
-    color: #000;
+    color: #fff;
     text-align: right;
     vertical-align: center;
 }
@@ -83,13 +202,14 @@ body {
     line-height: 40px;
     border-radius: 30px;
     border-color: transparent;
-    color: #000;
-    background-color: #ffffff;
+    color: #fff;
+    background-color: #2E2F38;
     cursor: pointer;
     transition: background-color 0.3s;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .btn:hover, .btn0:hover, .btn1:hover {
@@ -102,8 +222,8 @@ body {
 
 
 .btn0 {
-    color: #000;
-    background-color: #D2D3DA;
+    color: #fff;
+    background-color: #4E505F;
     cursor: pointer;
     transition: background-color 0.3s;
     display: flex;
