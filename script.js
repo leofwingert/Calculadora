@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
     let imgDelete = document.getElementById('delete escuro'); 
     let sunIcon = document.getElementById('sol');
     let moonIcon = document.getElementById('lua');
-    let cientifico = document.getElementById('btn_cientifico');
 
     let inputAtual = '';
     let operador = '';
@@ -33,6 +32,29 @@ document.addEventListener('DOMContentLoaded', function() {
             imgDelete.src = 'source/delete branco.png';
             sunIcon.style.display = 'none';
             moonIcon.style.display = 'block';
+        }
+    });
+
+    document.addEventListener('keydown', function(event) {
+        const key = event.key;
+        if (key >= '0' && key <= '9') {
+            input(key);
+        } else if (key === '.') {
+            input('.');
+        } else if (key === '+') {
+            input('+');
+        } else if (key === '-') {
+            input('-');
+        } else if (key === '*') {
+            input('*');
+        } else if (key === '/') {
+            input('÷');
+        } else if (key === 'Enter') {
+            input('=');
+        } else if (key === 'Backspace') {
+            input('delete');
+        } else if (key === 'Escape') {
+            handleIinputnput('C');
         }
     });
 
@@ -139,28 +161,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function formatResult(result) {
-        return parseFloat(result).toString().replace('.', ',');
+        let x = parseFloat(result).toString().replace('.', ',');
+        return x;
     }
-    });
-    document.addEventListener('keydown', function(event) {
-        const key = event.key;
-        if (key >= '0' && key <= '9') {
-            input(key);
-        } else if (key === '.') {
-            input('.');
-        } else if (key === '+') {
-            input('+');
-        } else if (key === '-') {
-            input('-');
-        } else if (key === '*') {
-            input('*');
-        } else if (key === '/') {
-            input('÷');
-        } else if (key === 'Enter') {
-            input('=');
-        } else if (key === 'Backspace') {
-            input('delete');
-        } else if (key === 'Escape') {
-            handleIinputnput('C');
-        }
     });
