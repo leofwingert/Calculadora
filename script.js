@@ -36,23 +36,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    cientifico.addEventListener('click', function() {
-        calculator.classList.toggle('scientific');
-    });
-
     buttons.forEach(button => {
         button.addEventListener('click', function() {
-            handleInput(this.id === 'btn_+/-' ? '+/-' : this.id === 'btn_delete' ? 'delete' : this.innerText);
+            input(this.id === 'btn_+/-' ? '+/-' : this.id === 'btn_delete' ? 'delete' : this.innerText);
         });
     });
 
-    function testaOperador(value) {
-        if(value === '+' || value === '-' || value === '*' || value === '÷') {
-            return false;
-        }
-    }
-
-    function handleInput(value) {
+    function input(value) {
         switch (value) {
             case 'C':
                 inputAtual = '';
@@ -91,9 +81,9 @@ document.addEventListener('DOMContentLoaded', function() {
             case '-':
             case '*':
             case '÷':
-                if(testaOperador(inputAtual)) {
-                    expression = expression.slice(0, -1);
-                    break;
+
+                if(inputAtual === ''){ 
+                    return;
                 }
                 if (primeiroNum === null) {
                     primeiroNum = parseFloat(inputAtual.replace(',', '.'));
@@ -155,22 +145,22 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('keydown', function(event) {
         const key = event.key;
         if (key >= '0' && key <= '9') {
-            handleInput(key);
+            input(key);
         } else if (key === '.') {
-            handleInput('.');
+            input('.');
         } else if (key === '+') {
-            handleInput('+');
+            input('+');
         } else if (key === '-') {
-            handleInput('-');
+            input('-');
         } else if (key === '*') {
-            handleInput('*');
+            input('*');
         } else if (key === '/') {
-            handleInput('÷');
+            input('÷');
         } else if (key === 'Enter') {
-            handleInput('=');
+            input('=');
         } else if (key === 'Backspace') {
-            handleInput('delete');
+            input('delete');
         } else if (key === 'Escape') {
-            handleInput('C');
+            handleIinputnput('C');
         }
     });
