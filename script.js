@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else if (key === 'Backspace') {
             input('delete');
         } else if (key === 'Escape') {
-            handleIinputnput('C');
+            input('C');
         }
     });
 
