@@ -167,13 +167,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function formatResult(result) {
-        if(result === 'Infinity'){
-            return 'Erro';
-        }
-        else if(result === 'NaN'){
-            return 'Erro';
-        }
-        else if (isDecimal(result)) {
+        if (isDecimal(result)) {
             return parseFloat(result).toFixed(2).toString().replace('.', ',');
         }
         else {
