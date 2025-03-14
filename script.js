@@ -117,18 +117,14 @@ document.addEventListener('DOMContentLoaded', function() {
             case '*':
             case '÷':
 
-                if(inputAtual === ''){ 
-                    return;
-                }
-                if (primeiroNum === null) {
-                    primeiroNum = parseFloat(inputAtual.replace(',', '.'));
-                } else if (operador !== '') {
-                    primeiroNum = calcula(primeiroNum, parseFloat(inputAtual.replace(',', '.')), operador);
-                }
+                if (operador !== '') {
+                    primeiroNum = calcula(primeiroNum, parseFloat(inputAtual), operador);
+                
                 operador = value;
                 expression += inputAtual + operador;
                 inputAtual = '';
                 display.value = expression;
+                }
                 break;
 
             case ',':
@@ -143,15 +139,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 break;
 
             case 'delete':
-                if (inputAtual !== '') {
-                    inputAtual = inputAtual.slice(0, -1);
-                } else if (operador !== '') {
-                    operador = '';
-                    expression = expression.slice(0, -1);
-                } else if (primeiroNum !== null) {
-                    primeiroNum = null;
-                    expression = '';
-                }
+                inputAtual = inputAtual.slice(0, -1)
                 display.value = expression + inputAtual;
                 break;
 
