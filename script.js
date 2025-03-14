@@ -17,8 +17,9 @@ document.addEventListener('DOMContentLoaded', function() {
     let result = 0;
     let expression = '';
 
-    sunIcon.style.display = 'none';
+    sunIcon.style.display = 'none'; // Inicialmente o ícone do sol não aparece
 
+    //modo escuro
     trilho.addEventListener('click', ()=>{
         trilho.classList.toggle('dark');
         body.classList.toggle('dark');
@@ -37,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Eventos de teclado
     document.addEventListener('keydown', function(event) {
         const key = event.key;
         if (key >= '0' && key <= '9') {
@@ -60,9 +62,18 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Eventos de clique
     buttons.forEach(button => {
         button.addEventListener('click', function() {
-            input(this.id === 'btn_+/-' ? '+/-' : this.id === 'btn_delete' ? 'delete' : this.innerText);
+            //botoes que contem imagem e nao char
+            if (this.id === 'btn_+/-') {
+                input('+/-');
+            } else if (this.id === 'btn_delete') {
+                input('delete');
+                //botoes que contem char
+            } else {
+                input(this.innerText);
+            }
         });
     });
 
@@ -120,8 +131,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 display.value = expression;
                 break;
 
-            case '.':
-                if (!inputAtual.includes('.')) {
+            case ',':
+                if(inputAtual === ''){
+                    display.value = '0,';
+                } else if (inputAtual.includes(',')) {
+                    return;
+                } else if (!inputAtual.includes(',')) {
                     inputAtual += value;
                     display.value = expression + inputAtual;
                 }
@@ -147,6 +162,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    // Funções auxiliares
     function calcula(a, b, operador) {
         switch (operador) {
             case '+':
@@ -162,10 +178,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    // Função para verificar se o número é decimal
     function isDecimal(num) {
         return (parseInt(num) != parseFloat(num)) && !isNaN(num);
     }
 
+
+    // Função para formatar o resultado,trocando o ponto por virgula
     function formatResult(result) {
         if (isDecimal(result)) {
             return parseFloat(result).toFixed(2).toString().replace('.', ',');

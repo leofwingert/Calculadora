@@ -34,130 +34,13 @@ body {
 }
 
 #lua {
+    margin-top: -1px;
     right: 10px;
 }
 
 #sol {
     left: 10px;
 }
-
-.trilho{
-    width: 72px;
-    height: 32px;
-    background-color: #000;
-    border-radius: 150px;
-    position: relative;
-    cursor: pointer;
-}
-
-.trilho .indicador{
-    align-items: center;
-    margin-top: 2px;
-    margin-left: 2px;
-    margin-right: 2px;
-    width: 26px;
-    height: 28px;
-    background-color: #4E505F;
-    border-radius: 50%;
-    transform: scale(.9);
-    position: absolute;
-    left: 0;
-    transition: left .5s;
-}
-
-.trilho.dark{
-    background-color: #F1F2F3;
-    transition: 0.5s;
-}
-
-.trilho.dark .indicador{
-    left: 42px;
-    background-color: #4E505F;
-    transition: 0.5s;
-
-}
-
-body.dark{
-    background-color: #F1F2F3;
-    transition: 0.5s;
-
-}
-
-.calculator.dark {
-    background-color: #fff;
-    transition: 0.5s;
-
-}
-
-.calculator.dark .display input {
-    color: #000000;
-}
-
-.calculator.dark .display1 input {
-    color: #4E505F;
-}
-
-.calculator.dark .buttons {
-    background-color: #FFFFFF;
-    transition: 0.5s;
-
-}
-
-.calculator.dark .btn, .calculator.dark .btn0, .calculator.dark .btn1 {
-    background-color: #FFFFFF;
-    color: #000000;
-    transition: 0.5s;
-
-}
-
-.calculator.dark .btn:hover, .calculator.dark .btn0:hover, .calculator.dark .btn1:hover {
-    background-color: #BFC0C6;
-    transition: 0.5s;
-
-}
-
-.calculator.dark .btn:active, .calculator.dark .btn0:active, .calculator.dark .btn1:active {
-    background-color: #A5A7B0;
-    transition: 0.5s;
-
-}
-
-.btn0.dark btn0_/{
-    background-color: #FFFFFF;
-    color: #fff;
-    transition: 0.5s;
-
-}
-
-.calculator.dark .btn0 {
-    background-color: #D2D3DA;
-    color: #000;
-    transition: 0.5s;
-
-}
-
-.calculator.dark .btn0:hover {
-    background-color: #555555;
-}
-
-.calculator.dark .btn0:active {
-    background-color: #aaa;
-}
-
-.calculator.dark .btn1 {
-    background-color: #4B5EFC;
-    color: #fff;
-}
-
-.calculator.dark .btn1:hover {
-    background-color: #4B5EFC;
-}
-
-.calculator.dark .btn1:active {
-    background-color: #4B5EFC;
-}
-
-
 
 .display {
     margin: 10px;
@@ -267,3 +150,123 @@ body.dark{
     justify-content: center;
     align-items: center;
 }
+
+
+.trilho{
+    width: 72px;
+    height: 32px;
+    background-color: #000;
+    border-radius: 150px;
+    position: relative;
+    cursor: pointer;
+}
+
+.trilho .indicador{
+    align-items: center;
+    margin-top: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
+    width: 26px;
+    height: 28px;
+    background-color: #4E505F;
+    border-radius: 50%;
+    transform: scale(.9);
+    position: absolute;
+    left: 0;
+    transition: left .5s;
+}
+
+.trilho.dark{
+    background-color: #F1F2F3;
+    transition: 0.5s;
+}
+
+.trilho.dark .indicador{
+    left: 42px;
+    background-color: #4E505F;
+    transition: 0.5s;
+
+}
+
+body.dark{
+    background-color: #F1F2F3;
+    transition: 0.5s;
+
+}
+
+.calculator.dark {
+    background-color: #fff;
+    transition: 0.5s;
+
+}
+
+.calculator.dark .display input {
+    color: #000000;
+}
+
+.calculator.dark .display1 input {
+    color: #4E505F;
+}
+
+.calculator.dark .buttons {
+    background-color: transparent;
+    transition: 0.5s;
+
+}
+
+.calculator.dark .btn, .calculator.dark .btn0, .calculator.dark .btn1 {
+    background-color: #FFFFFF;
+    color: #000000;
+    transition: 0.5s;
+
+}
+
+.calculator.dark .btn:hover, .calculator.dark .btn0:hover, .calculator.dark .btn1:hover {
+    background-color: #BFC0C6;
+    transition: 0.5s;
+
+}
+
+.calculator.dark .btn:active, .calculator.dark .btn0:active, .calculator.dark .btn1:active {
+    background-color: #A5A7B0;
+    transition: 0.5s;
+
+}
+
+.btn0.dark btn0_/{
+    background-color: #FFFFFF;
+    color: #fff;
+    transition: 0.5s;
+
+}
+
+.calculator.dark .btn0 {
+    background-color: #D2D3DA;
+    color: #000;
+    transition: 0.5s;
+
+}
+
+.calculator.dark .btn0:hover {
+    background-color: #555555;
+}
+
+.calculator.dark .btn0:active {
+    background-color: #aaa;
+}
+
+.calculator.dark .btn1 {
+    background-color: #4B5EFC;
+    color: #fff;
+}
+
+.calculator.dark .btn1:hover {
+    background-color: #4B5EFC;
+}
+
+.calculator.dark .btn1:active {
+    background-color: #4B5EFC;
+}
+
+
+
